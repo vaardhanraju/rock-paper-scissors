@@ -1,50 +1,50 @@
-function getComputerChoice() {
+function getRobotChoice() {
     const choice = ["rock" , "paper", "scissors","rock" , "paper", "scissors"]
     let value = Math.floor(Math.random() * 6)
     return choice[value]
 }
-function playRound(humanChoice, computerChoice) {
+function playRound(humanChoice, robotChoice) {
     document.getElementById("player-choice").textContent = humanChoice;
-    document.getElementById("robot-choice").textContent = computerChoice;
+    document.getElementById("robot-choice").textContent = robotChoice;
 
     const roundStatus = document.getElementById("round-win");
 
-    if (humanChoice === computerChoice) {
+    if (humanChoice === robotChoice) {
         roundStatus.textContent = "tie"
     }
     else if (humanChoice === "rock") {
-        if (computerChoice === "paper") {
+        if (robotChoice === "paper") {
             roundStatus.textContent = "paper beats rock"
-            console.log(`You lose! Computer choose ${computerChoice}`)
+            console.log(`You lose! Computer choose ${robotChoice}`)
             robotScore++
         }
-        else if (computerChoice === "scissors") {
+        else if (robotChoice === "scissors") {
             roundStatus.textContent = "rock beats scissors"
-            console.log(`You won! Computer choose ${computerChoice}`)
+            console.log(`You won! Computer choose ${robotChoice}`)
             humanScore++
         }
     }
     else if (humanChoice === "paper") {
-        if (computerChoice === "scissors") {
+        if (robotChoice === "scissors") {
             roundStatus.textContent = "scissors beats paper"
-            console.log(`You lose! Computer choose ${computerChoice}`)
+            console.log(`You lose! Computer choose ${robotChoice}`)
             robotScore++
         }
-        else if (computerChoice === "rock") {
+        else if (robotChoice === "rock") {
             roundStatus.textContent = "paper beats rock"
-            console.log(`You won! Computer choose ${computerChoice}`)
+            console.log(`You won! Computer choose ${robotChoice}`)
             humanScore++
         }
     }
     else if (humanChoice === "scissors") {
-        if (computerChoice === "rock") {
+        if (robotChoice === "rock") {
             roundStatus.textContent = "rock beats scissors"
-            console.log(`You lose! Computer choose ${computerChoice}`)
+            console.log(`You lose! Computer choose ${robotChoice}`)
             robotScore++
         }
-        else if (computerChoice === "paper") {
-            roundStatus.textContent = "paper beats rock"
-            console.log(`You won! Computer choose ${computerChoice}`)
+        else if (robotChoice === "paper") {
+            roundStatus.textContent = "scissors beats paper"
+            console.log(`You won! Computer choose ${robotChoice}`)
             humanScore++
         }
     }
@@ -72,7 +72,7 @@ rockBtn.addEventListener('click', () => {
         document.getElementById("round-win").textContent = "Game over"
     }
     else {
-        return playRound(rockBtn.id, getComputerChoice());
+        return playRound(rockBtn.id, getRobotChoice());
     }
 })
 
@@ -84,7 +84,7 @@ paperBtn.addEventListener('click', () => {
         document.getElementById("round-win").textContent = "Game over"
     }
     else {
-        return playRound(paperBtn.id, getComputerChoice());
+        return playRound(paperBtn.id, getRobotChoice());
     }
 })
 
@@ -96,7 +96,7 @@ scissorsBtn.addEventListener('click', () => {
         document.getElementById("round-win").textContent = "Game over"  
     }
     else {
-        return playRound(scissorsBtn.id, getComputerChoice());
+        return playRound(scissorsBtn.id, getRobotChoice());
     }
 })
 
@@ -106,4 +106,6 @@ document.getElementById("restart").addEventListener('click', () => {
     document.getElementById("player-current-score").textContent = "0";
     document.getElementById("robot-current-score").textContent = "0";
     document.getElementById("round-win").textContent = "? Beats ?" 
+    document.getElementById("player-choice").textContent = "?";
+    document.getElementById("robot-choice").textContent = "?";
 })
