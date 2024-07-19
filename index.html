@@ -1,11 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="script.js"></script>
-    <title>Rock Paper Scissors</title>
-</head>
-<body>
-</body>
-</html>
+<html>
+  <head>
+    <title>Hello World!</title>
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+      <div class="header">
+        <div class="game-name">Rock Paper Scissors</div>
+        <div class="required-wins">First who score 5 Wins!</div>
+
+        <!-- choiceBoard with Scores -->
+        <div class="choice-board"> 
+          <!-- Need two boards for one each -->
+
+          <!-- Player Choice and Score -->
+          <div class="player-board">
+            <!-- choice and current score -->
+             <div class="player-choice"><span id="player-choice">?</span></div>
+             <div class="player-score">Player: <span id="player-current-score">0</span></div>
+          </div>
+
+          <!-- Robot Choice and Score -->
+          <div class="robot-board">
+            <!-- choice and current score -->
+             <div class="robot-choice"><span id="robot-choice">?</span></div>
+             <div class="robot-score">Robot: <span id="robot-current-score">0</span></div>
+          </div>
+        </div>
+
+        <!-- Who won -->
+        <div id="round-win">
+          ? beats ?
+        </div>
+
+        <!-- Buttons -->
+        <div class="buttons">
+          <button class="rock" id="rock">rock</button>
+          <button class="paper" id="paper">paper</button>
+          <button class="scissors" id="scissors">scissors</button>
+        </div>
+        <div class="restart"><button id="restart">restart</button></div> 
+        <div class="credits">&copy; <a href="https://github.com/vaardhanraju" target="_blank">Jay <i style="font-size:24px; color: brown;" class="fa">&#xf09b;</i></a></div>
+      </div>
+      
+      <script src="script.js" defer></script>
+  </body>
+</html> 
