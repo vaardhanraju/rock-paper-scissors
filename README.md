@@ -1,10 +1,9 @@
-<h1>Rock Paper Scissors</h1>
+# **Rock Paper Scissors**
 
-<h4>The project is completely built with pure Javascript</h4>
+The aim of this project is to build an interactive RPS (Rock Paper Scissors) Game.
 
-includes
+### **The rules to follow**
 
-~ Functions
-~ Variables
-~ Loops
-~ Conditional Statements
+- The player should be able to play the game by clicking on buttons.
+- A div for displaying results and change all of your console.logs into DOM methods.
+- Display the running score, and announce a winner of the game once one player reaches 5 points.
