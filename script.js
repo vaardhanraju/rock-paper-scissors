@@ -84,7 +84,7 @@ paperBtn.addEventListener('click', () => {
         document.getElementById("round-win").textContent = "Game over"
     }
     else {
-        return playRound(rockBtn.id, getComputerChoice());
+        return playRound(paperBtn.id, getComputerChoice());
     }
 })
 
@@ -96,7 +96,7 @@ scissorsBtn.addEventListener('click', () => {
         document.getElementById("round-win").textContent = "Game over"  
     }
     else {
-        return playRound(rockBtn.id, getComputerChoice());
+        return playRound(scissorsBtn.id, getComputerChoice());
     }
 })
 
